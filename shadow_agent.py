@@ -3,7 +3,8 @@
 
 from groq import Groq  # or use Ollama if Groq isn't set up yet
 
-client = Groq(api_key="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")
+import os
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # Get free API key at: https://console.groq.com
 
 def shadow_explain(decision: str) -> str:
