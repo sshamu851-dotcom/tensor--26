@@ -20,8 +20,8 @@ def build_agent_graph(blocked=False):
     net.add_edge("Guardian", "Coder",    title="validates", color=edge_color, width=2)
     net.add_edge("Coder",    "Reviewer", title="explains",  color=edge_color, width=2)
 
-    net.save_graph("/tmp/agent_graph.html")
-    with open("/tmp/agent_graph.html", "r", encoding="utf-8") as f:
+    net.save_graph("agent_graph.html")
+    with open("agent_graph.html", "r", encoding="utf-8") as f:
         return f.read()
     
 # --- Mock state toggle ---
